@@ -20,10 +20,7 @@ public class IntToRoman {
 	X 可以放在 L (50) 和 C (100) 的左边，来表示 40 和 90。 
 	C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。
 	给定一个整数，将其转为罗马数字。输入确保在 1 到 3999 的范围内。
-	
-	来源：力扣（LeetCode）
-	链接：https://leetcode-cn.com/problems/integer-to-roman
-	著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
 	 * @param num
 	 * @return
 	 */
