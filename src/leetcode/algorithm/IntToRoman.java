@@ -24,13 +24,104 @@ public class IntToRoman {
 	 * @param num
 	 * @return
 	 */
-	public String intToRoman(int num) {
+	public static String intToRoman(int num) {
 		int res = 0;
-		if(num>=1000) {
-			int a = num/1000;
-			
+		String s = "";
+		while(num>0){
+			if(num>=1000) {
+				int a = num/1000;
+				s = s +singleToRoman(a*1000);
+				num = num-a*1000;
+			}else if(num>=100){
+				int a = num/100;
+				s = s +singleToRoman(a*100);
+				num = num-a*100;
+			}
+			else if(num>=10){
+				int a = num/10;
+				s = s +singleToRoman(a*10);
+				num = num-a*10;
+			}else{
+				s = s +singleToRoman(num);
+				num=0;
+			}
 		}
-		return null;
+		return s;
 
     }
+
+    public static String singleToRoman(int i){
+		String s = "";
+		if(i>=1000){
+			for (int i1 = 0; i1 < i/1000; i1++) {
+				s = s + "M";
+			}
+		}else if(i>=100){
+			if(i>500){
+				if(i==900){
+					s = s + "CM";
+				}else{
+					s = s + "D";
+					i = i-500;
+					for (int i1 = 0; i1 < i/100; i1++) {
+						s = s + "C";
+					}
+				}
+			}else if(i==400){
+				s = s + "CD";
+			}else if(i==500){
+				s = s + "D";
+			}else{
+				for (int i1 = 0; i1 < i/100; i1++) {
+					s = s + "C";
+				}
+			}
+		}else if(i>=10){
+			if(i>50){
+				if(i==90){
+					s = s + "XC";
+				}else{
+					s = s + "L";
+					i = i-50;
+					for (int i1 = 0; i1 < i/10; i1++) {
+						s = s + "X";
+					}
+				}
+			}else if(i==40){
+				s = s + "XL";
+			}else if(i==50){
+				s = s + "L";
+			}else{
+				for (int i1 = 0; i1 < i/10; i1++) {
+					s = s + "X";
+				}
+			}
+		}else{
+			if(i>5){
+				if(i==9){
+					s = s + "IX";
+				}else{
+					s = s + "V";
+					i = i-5;
+					for (int i1 = 0; i1 < i; i1++) {
+						s = s + "I";
+					}
+				}
+			}else if(i==4){
+				s = s + "IV";
+			}else if(i==5){
+				s = s + "V";
+			}else{
+				for (int i1 = 0; i1 < i; i1++) {
+					s = s + "I";
+				}
+			}
+		}
+		return s;
+	}
+
+	public static void main(String[] args) {
+		int a = 1994;
+		System.out.println(intToRoman(a));
+	}
 }
