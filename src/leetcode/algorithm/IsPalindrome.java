@@ -19,7 +19,7 @@ public class IsPalindrome {
             }
         }
         for(int i=1,j=length;i!=j & i-j!=1;i++,j--){
-        	System.out.print("Ñ­»·µÚ"+i+"´Î"+"\n");
+        	System.out.print(""+i+""+"\n");
         	int high = (x%((int) Math.pow(10,j)))/((int) Math.pow(10,j-1));
         	int low = (x%((int) Math.pow(10,i)))/((int) Math.pow(10,i-1));
         	System.out.print("high="+high+"\n");
