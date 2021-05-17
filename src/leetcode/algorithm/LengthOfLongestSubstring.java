@@ -41,13 +41,13 @@ public class LengthOfLongestSubstring {
 		int large=1;
 		int templarge=1;
 		for(int i=0,length=s.length();i<length-1;i++){
-			System.out.print("Íâ²ãÑ­»·µÚ"+i+"´Î"+"\n");
+			System.out.print("å¤–å±‚å¾ªçŽ¯ç¬¬"+i+"æ¬¡"+"\n");
 			templarge=1;
 			for(int j=i+1;j<length;j++){
-				System.out.print("------ÄÚ²ãÑ­»·"+j+"\n");
+				System.out.print("------å†…å±‚å¾ªçŽ¯"+j+"\n");
 				int flag=0;
 				for(int k=i;k<j;k++){
-					System.out.print("------------±È½Ï"+s.substring(k, k+1)+"ºÍ"+s.substring(j, j+1)+"\n");
+					System.out.print("------------æ¯”è¾ƒ"+s.substring(k, k+1)+"å’Œ"+s.substring(j, j+1)+"\n");
 					if(s.substring(k, k+1).equals(s.substring(j, j+1))){
 						flag=1;
 					}
@@ -64,6 +64,6 @@ public class LengthOfLongestSubstring {
 			}
 		}
 		return large;
-        
-    }
+
+	}
 }
