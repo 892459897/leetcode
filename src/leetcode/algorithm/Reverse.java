@@ -10,12 +10,25 @@ package leetcode.algorithm;
  */
 public class Reverse {
 	public static int reverse(int x) {
-		if(x==0){
-			return x;
-		}else if(x>0){
-			int length = String.valueOf(x).length();
-			
+		int temp = 0;
+		while (x!=0){
+			int a = x%10;
+
+			//判断是否 大于 最大32位整数
+			if (temp>214748364 || (temp==214748364 && a>7)) {
+				return 0;
+			}
+			//判断是否 小于 最小32位整数
+			if (temp<-214748364 || (temp==-214748364 && a<-8)) {
+				return 0;
+			}
+			temp = temp*10 + a;
+			x /= 10;
 		}
-		return x;
+		return temp;
     }
+
+	public static void main(String[] args) {
+		System.out.println(reverse(-123));
+	}
 }
