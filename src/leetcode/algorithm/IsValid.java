@@ -1,6 +1,9 @@
 package leetcode.algorithm;
 
-class Solution {
+import java.util.HashMap;
+import java.util.Map;
+
+class IsValid {
     private static final Map<Character,Character> map = new HashMap<Character,Character>(){{
         put('{','}'); put('[',']'); put('(',')'); put('?','?');
     }};
