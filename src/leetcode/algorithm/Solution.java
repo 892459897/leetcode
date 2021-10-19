@@ -1,3 +1,5 @@
+package leetcode.algorithm;
+
 class Solution {
     private static final Map<Character,Character> map = new HashMap<Character,Character>(){{
         put('{','}'); put('[',']'); put('(',')'); put('?','?');
