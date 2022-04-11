@@ -114,7 +114,7 @@ public class Amain {
 	
 //	public static void main(String[] args) {
 //        Scanner in = new Scanner(System.in);
-//        while (in.hasNextLine()) {// 注意，如果输入是多个测试用例，请通过while循环处理多个测试用例
+//        while (in.hasNextLine()) {
 //            String a = in.nextLine();
 //            int count = 0;
 //          
