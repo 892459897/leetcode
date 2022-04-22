@@ -26,6 +26,7 @@ public class Search704 {
     }
 
     public static void main(String[] args) {
+
         int[] nums = new int[]{-1};
         int target = -1;
         System.out.println(search(nums,target));
